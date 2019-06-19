@@ -1,0 +1,33 @@
+{
+  "name": "mrgato",
+  "version": "0.0.1",
+  "description": "acerca de? su bot",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "express": "^4.16.4",
+    "ffmpeg-binaries": "^4.0.0",
+    "http": "^0.0.0",
+    "mega-dtbs": "^0.1.16",
+    "opusscript": "^0.0.6",
+    "sqlite": "^3.0.1",
+    "youtube-node": "^1.3.3",
+    "ytd-vue": "^4.1.2",
+    "ytdl-core": "^0.29.1"
+  },
+  "engines": {
+    "node": "8.4.0"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/hello-express"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
