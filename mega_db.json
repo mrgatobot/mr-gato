@@ -1,0 +1,14 @@
+{
+  "prefixes": {
+    "value": {
+      "${message": {
+        "guild": {
+          "id}": "+"
+        }
+      }
+    }
+  },
+  "channellogs": {
+    "value": {}
+  }
+}
