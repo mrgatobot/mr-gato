@@ -52,7 +52,7 @@ if (!message.content.startsWith(prefix)) return;
   };
 });
 
-client.login(process.env.token) 
+client.login("NTU5NDMzNTE4ODAzODQ1MTIx.XKEVbw.nupsBLnGrWU8M6qjtqGWnRWsJNs"); 
 /////////////////
 
 
