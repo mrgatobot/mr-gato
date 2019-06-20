@@ -52,10 +52,7 @@ if (!message.content.startsWith(prefix)) return;
   };
 });
 
-client.login("process.env.BOT_KEY"); 
-/////////////////
-
-
+client.login("process.env.BOT_KEY");
 
 ///////////////// variables unicas (que solo se ejecutan 1 vez)
 const actividades = [
