@@ -52,7 +52,7 @@ if (!message.content.startsWith(prefix)) return;
   };
 });
 
-client.login("NTkxMDM1OTQ1NjgwMjQwNjUz.XQq8gQ.C4rK0v_pXJkaUefgNTjkCJIzmjI"); 
+client.login("process.env.BOT_KEY"); 
 /////////////////
 
 
