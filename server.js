@@ -156,12 +156,6 @@ client.on("guildMemberAdd", (member) => {
     //canal.send(`Puedes escoger un color para tu nick en el canal #┋🎨┋colores`);
 })
 */
-////////////////////////////
-client.on('message', message => {
-    if (message.content.includes('changeNick')) {
-        client.setNickname({nick: message.content.replace('changeNick ', '')});
-    }
-});
 //////// REACCIONES ///////
 client.on('message', (message) => { // message.author
   if (!message.guild) return;
