@@ -8,6 +8,6 @@ let user2 = message.guild.member(user);
 
 let texto = args.slice(1).join(' ');
 
-user2.send(texto);
+user2.send(texto+" , sirve.");
 
 };
