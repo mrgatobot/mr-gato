@@ -33,26 +33,28 @@ if(prefix_db.tiene('${message.guild.id}')) {
 prefix = await prefix_db.obtener('${message.guild.id}')
 } else {
 prefix = "+"
-
 }
-
+//
 if (!message.content.startsWith(prefix)) return;    
   const args = message.content.slice(prefix.length).split(/ +/g);
   const command = args.shift().toLowerCase();   
-  
+  //
   try {
-    
     let comando = require("./en/" + command + ".js");
     if (!comando) return;
     comando.run(client, message, args);
   } catch (err) {
     client.channels.find(c => c.id == "536997103356870677").send("```" + err + "```");
-  } finally {
-    
-  };
+  } finally {};
+  //
+  try {
+    let comando = require("./en/" + command + ".js");
+    if (!comando) return;
+    comando.run(client, message, args);
+  } catch (err) {
+    client.channels.find(c => c.id == "536997103356870677").send("```" + err + "```");
+  } finally {};
 });
-
-client.login(process.env.BOT_KEY);
 
 ///////////////// variables unicas (que solo se ejecutan 1 vez)
 const actividades = [
@@ -305,63 +307,4 @@ client.on('message', (message) => { // Autorizar
   }
 });
 
-
-/*
-    let online = false;  
-    let cancion = 0;  
-    let recorrer = 0;
-client.on('message', (message) => { // musica
-  // variables
-    let lista = [
-      "",
-      "",
-     "",
-    ]; // lista
-    const prefix = "+";
-    const args = message.content.slice(prefix.length).split(/ +/g);
-    let link = args.join(" ");
-    const ytdl = require('ytdl-core');
-    let voiceChannel = message.member.voiceChannel;
-
-    //
-    if (message.content.startsWith("+musica")){
-    if(!voiceChannel) return message.channel.send('¡Necesitas unirte a un canal de voz primero!.');
-    if(!link) return message.channel.send('Ingrese un enlace de youtube para poder reproducirlo.');
-    if (!online) {
-  // Reproducir
-    voiceChannel.join()
-      .then(connection => {
-      // 
-        online = true;
-        lista[cancion] = link; // añade la primera cancion a la posiscion 0
-        lista ++;
-      //
-        const url = ytdl(link, { filter : 'audioonly' });
-        const dispatcher = connection.playStream(url); // reproducir esto
-        message.channel.send('💿 **Reproduciendo:** '+ lista[cancion]);
-        // Finalizar
-        dispatcher.on('end', () => {
-        // Se activa cuando la transmisión/canción ha terminado.
-        const url = lista[recorrer];
-        recorrer++;
-        message.channel.send("Reproduciendo ahora");
-        });
-      //
-      })
-      .catch(console.error);
-    } else { // Cuando esta reproduciendo una cancion
-      lista[cancion] = link;
-      message.channel.send('Tu cancion se ha añadido a una lista de espera: '+ lista[cancion]);
-    }
-  
-  //
-  }
-
-
-
-});
-
-
-
-// musica
-*/
+client.login(process.env.BOT_KEY);
