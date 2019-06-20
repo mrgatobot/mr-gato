@@ -47,15 +47,21 @@ if (!message.content.startsWith(prefix)) return;
     client.channels.find(c => c.id == "536997103356870677").send("```" + err + "```");
   } finally {};
   //
+if (!message.content.startsWith(prefix)) return;    
+  const args2 = message.content.slice(prefix.length).split(/ +/g);
+  const command2 = args2.shift().toLowerCase();   
+  //
   try {
-    let comando2 = require("./adm/" + command + ".js");
+    let comando2 = require("./adm/" + command2 + ".js");
     if (!comando2) return;
-    comando2.run(client, message, args);
+    comando2.run(client, message, args2);
   } catch (err) {
     client.channels.find(c => c.id == "536997103356870677").send("```" + err + "```");
   } finally {};
 });
+/*
 
+*/
 ///////////////// variables unicas (que solo se ejecutan 1 vez)
 const actividades = [
     "+ayuda | comandos.",
