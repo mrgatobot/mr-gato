@@ -1,0 +1,17 @@
+const Discord = require("discord.js") // Libreria | conjunto de funciones previamente hechas
+exports.run = (client, message, args) => {
+  
+    let image = [
+        "https://i.pinimg.com/originals/64/d7/f3/64d7f3ad3b9f3863480fe65c7ed84dcd.jpg", // nro 1
+        "https://i.pinimg.com/originals/5e/c4/80/5ec480ddcab3c63e8592e0522170ae9a.jpg", // nro 2
+        "https://i.pinimg.com/originals/6a/9a/c8/6a9ac83c95a44f0d0b0c0a433da54d29.jpg", // nro 3
+        "", // nro 4
+        "", // nro 5
+        "", // nro 6
+      ] 
+  var embed = new Discord.RichEmbed()
+  .setTitle("Dado Lanzado")
+  .setColor(3447003)
+  .setImage(image[Math.floor(Math.random() * image.length)]) // Sacar un mensaje al azar
+  message.channel.send({embed});
+} 
