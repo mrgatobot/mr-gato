@@ -1,7 +1,6 @@
 const Discord = require("discord.js")
 exports.run = (client, message, args) => {
   //if (message.channel.id === '504748615110098973'){
-  
   message.delete();
   let texto = args.join(" "); 
   if(!texto) return message.channel.send('Escribe una confesion.');
