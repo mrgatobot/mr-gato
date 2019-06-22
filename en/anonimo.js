@@ -1,6 +1,6 @@
 const Discord = require("discord.js")
 exports.run = (client, message, args) => {
-  if (message.channel.id === '504748615110098973'){
+  //if (message.channel.id === '504748615110098973'){
   
   message.delete();
   let texto = args.join(" "); 
@@ -11,8 +11,10 @@ exports.run = (client, message, args) => {
   .setColor(3447003)
   .setTimestamp()
   message.channel.send({embed});
+  /*
   } else {
     message.channel.send("No puedes usar este comando en este canal.");
   }
+  */
 }
 
