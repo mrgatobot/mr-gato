@@ -130,7 +130,7 @@ const horas = [
     ];
     // Temporizador
       
-      if (sector == 5) sector = 1;
+      if (sector == 4) sector = 0;
       else {sector ++;}
       
       client.channels.get("561695655345782785").setName(horas[sector]);
