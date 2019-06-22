@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
         "https://1.bp.blogspot.com/-mPzTl1VlTbM/XFcc-bT-QLI/AAAAAAAARsQ/SRa_STYeLKs9SpEMcJya2Uses0eY9QYMwCLcBGAs/s1600/imagenes%2B-%2Bgratis%2B-%2Bde%2B-%2Bgatitos%2B-%2Btiernos%2B-%2Bpara%2B-%2Bdescargar%2B-%2B8.jpg", // nro 8
       ] 
   var embed = new Discord.RichEmbed()
-  .setTitle("Dado Lanzado")
+  .setTitle("Mira! Un lindo gato.")
   .setColor(3447003)
   .setImage(image[Math.floor(Math.random() * image.length)]) // Sacar un mensaje al azar
   message.channel.send({embed});
