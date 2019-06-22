@@ -106,7 +106,7 @@ function tiempo(offset) {
   
     //
     var horas = nd.getHours();
-    if (horas > 12 && minutos_fix > 0) var mm = "p. m.";
+    if (horas > 11) var mm = "p. m.";
     else {var mm = "a. m.";}
   
     var horas_fix = horas%12;
@@ -130,7 +130,7 @@ const horas = [
     ];
     // Temporizador
       
-      if (sector > 4) sector = 0;
+      if (sector == 5) sector = 1;
       else {sector ++;}
       
       client.channels.get("561695655345782785").setName(horas[sector]);
