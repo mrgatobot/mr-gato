@@ -7,7 +7,7 @@ exports.run = (client, message, args) => {
   .addField("**~~Comandos Musica:~~ |En Mantenimiento|**", "**EN MANTENIMIENTO**")
   .addField("**Comandos Reacciones:**", "`+llorar,` `+cantar,` `+feliz,` `+reir,` `+presumir,` `+dormir,` `+correr,` `+dormir,` `+gritar,` `+sonrojado,` `+enojarse,` `+aburrido,`")
   .addField("**Comandos Interactivos:**", "`+abrazar,` `+besar,` `+acariciar,` `+bailar,` `+pegar,` `+lamer,` `+chocalas,` `+morder,` `+matar,`")
-  .addField("**Comandos Divertidos:**", "`+dado,` `+edecir,` `+anonimo,` `+decir,` `+roll,`")
+  .addField("**Comandos Divertidos:**", "`+dado,` `+edecir,` `+anonimo,` `+decir,` `+roll,` `+ora`")
   .setColor(3447003)
   message.channel.send({embed});
   
