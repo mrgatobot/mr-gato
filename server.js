@@ -122,16 +122,15 @@ var d2 = new Date();
   
 /// Vars
 const horas = [
-    puntero+"Mexico: "+tiempo('-6'),
+    puntero+"Mexico: "+tiempo('-5'),
     puntero+"Colombia: "+tiempo('-5'),
     puntero+"Argentina: "+tiempo('-3'),
     puntero+"Venezuela: "+tiempo('-4'),
     puntero+"España: "+tiempo('+2'),
-    //puntero+"Fecha: "+dia[dias]+"/"+meses[mes]+"/"+fix_ano, //
     ];
     // Temporizador
       
-      if (sector > 5) sector = 0;
+      if (sector > 4) sector = 0;
       else {sector ++;}
       
       client.channels.get("561695655345782785").setName(horas[sector]);
