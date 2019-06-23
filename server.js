@@ -76,7 +76,7 @@ const actividades = [
     ];
 
 let sector = 0;
-var puntero = "⇢ ";
+var puntero = "";
 
 client.on('ready', () => {
     setInterval(() => {
