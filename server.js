@@ -1,5 +1,8 @@
 //CONTENIDO DEL BOT
-const db = require('mega-dtbs');
+
+//const db = require('mega-dtbs');
+const db = new sqlite3.Database("./mybotdata.sqlite")
+
 let prefix_db = new db.crearDB("prefixes");
 let logs_db = new db.crearDB("channellogs")
 
