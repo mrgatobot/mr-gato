@@ -4,6 +4,9 @@ let prefix_db = new db.crearDB("prefixes");
 let logs_db = new db.crearDB("channellogs")
 
 // =
+
+const sqlite3 = require('sqlite3').verbose();
+//
 const http = require('http');
 const express = require('express');
 const app = express();
