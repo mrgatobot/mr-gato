@@ -54,17 +54,6 @@ if (!message.content.startsWith(prefix)) return;
   } finally {};
 });
 //
-const Enmap = require("enmap");
-const fs = require("fs");
-
-fs.readdir("./adm/", (err, files) => {
-  if (err) return console.error(err);
-  files.forEach(file => {
-    const event = require(`./events/${file}`);
-    let eventName = file.split(".")[0];
-    client.on(eventName, event.bind(null, client));
-  });
-});
 /*
 */
 ///////////////// variables unicas (que solo se ejecutan 1 vez)
