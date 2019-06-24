@@ -1,5 +1,9 @@
 //CONTENIDO DEL BOT
+const fs = require('fs');
+client.commands = new Discord.Collection();
 
+const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+//
 const db = require('mega-dtbs');
 //const db = new sqlite3.Database("./mybotdata.sqlite")
 
@@ -47,18 +51,22 @@ if (!message.content.startsWith(prefix)) return;
   //
   try {
     let comando = require("./en/" + command + ".js");
-    let comando2 = require("./adm/" + command + ".js");
+    //let comando2 = require("./adm/" + command + ".js");
     if (!comando) return;
-    if (!comando2) return;
     comando.run(client, message, args);
-    comando2.run(client, message, args);
   } catch (err) {
     client.channels.find(c => c.id == "536997103356870677").send("```" + err + "```");
   } finally {};
   //
-
 });
+//
+for (const file of commandFiles) {
+	const command = require(`./adm/${file}`);
 
+	// set a new item in the Collection
+	// with the key as the command name and the value as the exported module
+	client.commands.set(command.name, command);
+}
 ///////////////// variables unicas (que solo se ejecutan 1 vez)
 const actividades = [
     "+ayuda | comandos.",
