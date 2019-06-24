@@ -46,20 +46,14 @@ if (!message.content.startsWith(prefix)) return;
   const command = args.shift().toLowerCase();   
   //
   try {
-    let comando = require("./en/" + command + ".js");
+    let comando = require("./adm/" + command + ".js");
     if (!comando) return;
     comando.run(client, message, args);
   } catch (err) {
     client.channels.find(c => c.id == "536997103356870677").send("```" + err + "```");
   } finally {};
   //
-  try {
-    let comando2 = require("./adm/" + command + ".js");
-    if (!comando2) return;
-    comando2.run(client, message, args);
-  } catch (err) {
-    client.channels.find(c => c.id == "536997103356870677").send("```" + err + "```");
-  } finally {}
+
 });
 
 ///////////////// variables unicas (que solo se ejecutan 1 vez)
