@@ -52,21 +52,20 @@ if (!message.content.startsWith(prefix)) return;
   } catch (err) {
     client.channels.find(c => c.id == "536997103356870677").send("```" + err + "```");
   } finally {};
-  //
-if (!message.content.startsWith(prefix)) return;    
-  const args2 = message.content.slice(prefix.length).split(/ +/g);
-  const command2 = args2.shift().toLowerCase();   
-  //
-  try {
-    let comando2 = require("./adm/" + command2 + ".js");
-    if (!comando2) return;
-    comando2.run(client, message, args2);
-  } catch (err) {
-    client.channels.find(c => c.id == "536997103356870677").send("```" + err + "```");
-  } finally {};
+});
+//
+const Enmap = require("enmap");
+const fs = require("fs");
+
+fs.readdir("./adm/", (err, files) => {
+  if (err) return console.error(err);
+  files.forEach(file => {
+    const event = require(`./events/${file}`);
+    let eventName = file.split(".")[0];
+    client.on(eventName, event.bind(null, client));
+  });
 });
 /*
-
 */
 ///////////////// variables unicas (que solo se ejecutan 1 vez)
 const actividades = [
