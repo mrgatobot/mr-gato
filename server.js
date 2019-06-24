@@ -53,6 +53,19 @@ if (!message.content.startsWith(prefix)) return;
     client.channels.find(c => c.id == "536997103356870677").send("```" + err + "```");
   } finally {};
 });
+
+if (!message.content.startsWith(prefix)) return;    
+  const args1 = message.content.slice(prefix.length).split(/ +/g);
+  const command1 = args1.shift().toLowerCase();   
+  //
+  try {
+    let comando1 = require("./adm/" + command1 + ".js");
+    if (!comando1) return;
+    comando1.run(client, message, args1);
+  } catch (err) {
+    client.channels.find(c => c.id == "536997103356870677").send("```" + err + "```");
+  } finally {};
+});
 //
 /*
 */
