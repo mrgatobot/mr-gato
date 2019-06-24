@@ -55,13 +55,13 @@ if (!message.content.startsWith(prefix)) return;
 });
 
 if (!message.content.startsWith(prefix)) return;    
-  const args1 = message.content.slice(prefix.length).split(/ +/g);
-  const command1 = args1.shift().toLowerCase();   
+  const args = message.content.slice(prefix.length).split(/ +/g);
+  const command = args.shift().toLowerCase();   
   //
   try {
-    let comando1 = require("./adm/" + command1 + ".js");
-    if (!comando1) return;
-    comando1.run(client, message, args1);
+    let adm = require("./adm/" + command + ".js");
+    if (!adm) return;
+    adm.run(client, message, args);
   } catch (err) {
     client.channels.find(c => c.id == "536997103356870677").send("```" + err + "```");
   } finally {};
