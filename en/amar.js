@@ -18,7 +18,6 @@ exports.run = (client, message, args) => {
         "https://media.giphy.com/media/yx5QDTbqAY7vJyIGBO/giphy.gif", // dexter
         "https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif", // corazon feliz
           ] 
-
   if(!user) return message.channel.send('Mencione a un usuario.');
   if(user === message.author) return message.channel.send('No te puedes pegar a ti mismo. (?)');
   var embed = new Discord.RichEmbed()
