@@ -45,6 +45,7 @@ exports.run = (client, message, args) => {
         "https://cdn.weeb.sh/images/H1ha_L7DW.gif", // sono hanabira
         "https://images-ext-1.discordapp.net/external/AH1tmnmEqRJal9mhvrULZjQRSrGMfsisK9LWSptwuRY/https/cdn.weeb.sh/images/HydF_LmPW.gif", //largo
       ] 
+  if(user === message.author) return message.channel.send('¿Quieres bailar contigo mismo?');
   if (user){ // bailar con
   var embed = new Discord.RichEmbed()
   .setAuthor(message.author.username, message.author.avatarURL)
