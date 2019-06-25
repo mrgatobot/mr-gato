@@ -3,11 +3,12 @@ exports.run = (client, message, args) => {
   
   var embed = new Discord.RichEmbed()
   .setColor("#f22b46")
-  .addField("Creadores:", "`DeMaick#5160` | `Pao#2243`")
-  .addField("**~~Comandos Musica:~~ |En Mantenimiento|**", "**EN MANTENIMIENTO**")
-  .addField("**Comandos Reacciones:**", "`+llorar,` `+cantar,` `+feliz,` `+reir,` `+presumir,` `+dormir,` `+correr,` `+dormir,` `+gritar,` `+sonrojado,` `+enojarse,` `+aburrido,`")
+  .addField("**Creadores:**", "`DeMaick#5160` | `Pao#2243`")
+  .addField("**Servidor del bot:**", "https://discord.gg/qCSawex")
+  .addField("**Comandos Musica:**", "**[EN MANTENIMIENTO]**")
+  .addField("**Comandos de Reacción:**", "`+llorar,` `+cantar,` `+feliz,` `+reir,` `+presumir,` `+dormir,` `+correr,` `+gritar,` `+sonrojado,` `+enojarse,` `+aburrido,`")
   .addField("**Comandos Interactivos:**", "`+abrazar,` `+besar,` `+acariciar,` `+bailar,` `+pegar,` `+lamer,` `+chocalas,` `+morder,` `+matar,`")
-  .addField("**Comandos Divertidos:**", "`+dado,` `+edecir,` `+anonimo,` `+decir,` `+roll,` `+ora`")
+  .addField("**Comandos Útiles**", "`+dado,` `+edecir,` `+anonimo,` `+decir,` `+roll,` `+ora`")
   .setColor(3447003)
   message.channel.send({embed});
   
