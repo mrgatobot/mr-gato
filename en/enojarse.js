@@ -31,7 +31,7 @@ exports.run = (client, message, args) => {
   } else {
   var embed = new Discord.RichEmbed()
   .setAuthor(message.author.username, message.author.avatarURL)
-  .setDescription("**¡Esta enojabe!**")
+  .setDescription("**¡Esta enojado!**")
   .setColor(3447003)
   .setTimestamp()
   .setImage(gifs[Math.floor(Math.random() * gifs.length)]) // Sacar un mensaje al azar
