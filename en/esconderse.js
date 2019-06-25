@@ -16,7 +16,6 @@ exports.run = (client, message, args) => {
         "https://media.giphy.com/media/x49zkz0GOj23NfNgRr/giphy.gif", // fondo morado
         "https://media.giphy.com/media/Adqe9XUP3x9LO/giphy.gif", // oficina varios
        ]
-
   var embed = new Discord.RichEmbed()
   .setAuthor(message.author.username, message.author.avatarURL)
   .setDescription("**¡Se escondio!**")
