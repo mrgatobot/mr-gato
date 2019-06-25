@@ -24,7 +24,7 @@ exports.run = (client, message, args) => {
       ] 
 
   if(!user) return message.channel.send('Mencione a un usuario.');
-  if(user === message.author) return message.channel.send('Te quieres acariciar a ti mismo? o.O');
+  if(user === message.author) return message.channel.send('¿Te quieres acariciar a ti mismo? o.O');
   var embed = new Discord.RichEmbed()
   .setAuthor(message.author.username, message.author.avatarURL)
   .setDescription("**¡Acaricia a** "+user+"**!**")
