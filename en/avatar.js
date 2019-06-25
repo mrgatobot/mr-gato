@@ -5,7 +5,7 @@ let miembro = message.mentions.users.first() || message.author;
 let cooldown= new Set();
 
 if(cooldown.has(message.author.id)){
-   message.channel.send(message.author.username+ " utilice el comando despues de 10 segundos!");
+   message.channel.send(message.author.username+ " espera 10s para volver a usar el comando.");
    return;
 }
 cooldown.add(message.author.id);
@@ -13,10 +13,10 @@ setTimeout(() => {
   cooldown.delete(message.author.id);
 }, 10000);
     const embed = new Discord.RichEmbed()
+    //{miembro.tag}
+        .setTitle("Avatar de: "+miembro)
         .setImage(`${miembro.avatarURL}`)
-        .setColor("#FE2E64")
-        .setFooter(`Avatar de ${miembro.tag}`);
-
+        .setColor(3447003)
     message.channel.send(embed);
   
  // message.author
