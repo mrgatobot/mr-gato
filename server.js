@@ -1,8 +1,4 @@
 //CONTENIDO DEL BOT
-const fs = require('fs');
-client.commands = new Discord.Collection();
-
-const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 //
 const db = require('mega-dtbs');
 //const db = new sqlite3.Database("./mybotdata.sqlite")
