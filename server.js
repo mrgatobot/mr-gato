@@ -47,7 +47,6 @@ if (!message.content.startsWith(prefix)) return;
   //
   try {
     let comando = require("./en/" + command + ".js");
-    //let comando2 = require("./adm/" + command + ".js");
     if (!comando) return;
     comando.run(client, message, args);
   } catch (err) {
@@ -59,14 +58,7 @@ if (!message.content.startsWith(prefix)) return;
 ///////////////// variables unicas (que solo se ejecutan 1 vez)
 const actividades = [
     "+ayuda | comandos.",
-    "lamer a Demi",
-    "programar",
-    "esconderme",
-    "vigilar",
-    "ser lindo",
-    "la pelota",
-    "dormir con Demi",
-    "morder a Pao",
+    "+reportar <usuario> <Motivo> | Reportar un usuario.",
     ];
 
 let sector = 0;
