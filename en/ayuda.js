@@ -3,7 +3,7 @@ exports.run = (client, message, args) => {
   
   var embed = new Discord.RichEmbed()
   .setColor("#f22b46")
-  .addField("**✦ Creadores:**", "`DeMaick#5160` | `Pao#2243`")
+  .addField("**✦ Creadores:**", "`DeMaick#8614` | `Pao#2243`")
   .addField("✦ Servidor del bot:", "https://discord.gg/qCSawex")
   .addField("» Comandos Útiles:", "`+reportar,` `+anonimo,` `+azar,` `+decir,` `+dado,` ")
   .addField("» Comandos de Reacción:", "`+llorar,` `+cantar,` `+feliz,` `+reir,` `+presumir,` `+dormir,` `+correr,` `+gritar,` `+sonrojado,` `+enojarse,` `+aburrido,` `+ora`")
