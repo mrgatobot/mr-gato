@@ -51,7 +51,6 @@ if (!message.content.startsWith(prefix)) return;
   } finally {};
 });
 //
-const client = new Discord.Client()
 client.on('message',async message => {
   if (!message.guild) return;
   if (message.member.bot) return;
