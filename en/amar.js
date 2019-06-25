@@ -19,7 +19,7 @@ exports.run = (client, message, args) => {
         "https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif", // corazon feliz
           ] 
   if(!user) return message.channel.send('Mencione a un usuario.');
-  if(user === message.author) return message.channel.send('No te puedes pegar a ti mismo. (?)');
+  if(user === message.author) return message.channel.send('Al parecer te amas a ti mismo. (?)');
   var embed = new Discord.RichEmbed()
   .setAuthor(message.author.username, message.author.avatarURL)
   .setDescription("**¡Ama a** "+user+"**! <3**")
