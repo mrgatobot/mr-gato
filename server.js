@@ -29,30 +29,15 @@ const sql = require('sqlite')
  sql.open('./warn.sqlite') 
 
 const client = new Discord.Client()
-
 client.on('message',async message => {
   if (!message.guild) return;
   if (message.member.bot) return;
-  
-  let prefix;
+let prefix;
 if(prefix_db.tiene('${message.guild.id}')) {  
 prefix = await prefix_db.obtener('${message.guild.id}')
 } else {
 prefix = "+"
 }
-
-
-let commandsList = fs.readdirSync('./en/'); // return an array of all the files and folders inside the commands folder
-Client.commands = {}; // initiate value for the command list of client
-for (i = 0; i < commandsList.length; i++) {
-    let item = commandsList[i];
-    if (item.match(/\.js$/)) { // only take js files
-        delete require.cache[require.resolve(`./commands/${item}.js`)]; // delete the cache of the require, useful in case you wanna reload the command again
-        Client.commands[item.slice(0, -3)] = require(`./commands/${item}.js`); // and put the require inside the client.commands object
-    }
-}
-//
-  /*
 if (!message.content.startsWith(prefix)) return;    
   const args = message.content.slice(prefix.length).split(/ +/g);
   const command = args.shift().toLowerCase();   
@@ -64,9 +49,30 @@ if (!message.content.startsWith(prefix)) return;
   } catch (err) {
     client.channels.find(c => c.id == "536997103356870677").send("```" + err + "```");
   } finally {};
-  //
 });
-*/
+//
+const client = new Discord.Client()
+client.on('message',async message => {
+  if (!message.guild) return;
+  if (message.member.bot) return;
+let prefix;
+if(prefix_db.tiene('${message.guild.id}')) {  
+prefix = await prefix_db.obtener('${message.guild.id}')
+} else {
+prefix = "+"
+}
+if (!message.content.startsWith(prefix)) return;    
+  const args = message.content.slice(prefix.length).split(/ +/g);
+  const command = args.shift().toLowerCase();   
+  //
+  try {
+    let adm_comando = require("./adm/" + command + ".js");
+    if (!adm_comando) return;
+    adm_comando.run(client, message, args);
+  } catch (err) {
+    client.channels.find(c => c.id == "536997103356870677").send("```" + err + "```");
+  } finally {};
+});
 //
 ///////////////// variables unicas (que solo se ejecutan 1 vez)
 const actividades = [
