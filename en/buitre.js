@@ -19,7 +19,7 @@ exports.run = (client, message, args) => {
   if(user === message.author) return message.channel.send('No te puedes pegar a ti mismo. (?)');
   var embed = new Discord.RichEmbed()
   .setAuthor(message.author.username, message.author.avatarURL)
-  .setDescription("**¡**"+user+"** es un buitre!**")
+  .setDescription(user)
   .setColor(3447003)
   .setTimestamp()
   .setImage(gifs[Math.floor(Math.random() * gifs.length)]) // Sacar un mensaje al azar
