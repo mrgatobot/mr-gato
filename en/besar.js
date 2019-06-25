@@ -25,7 +25,7 @@ exports.run = (client, message, args) => {
         "https://cdn.weeb.sh/images/ryoW3T_vW.gif", // sao
       ] 
   if(!user) return message.channel.send('Mencione a un usuario.');
-  if(user === message.author) return message.channel.send('No te puedes besar a ti mismo.');
+  if(user === message.author) return message.channel.send('¡No te puedes besar a ti mismo!');
 var embed = new Discord.RichEmbed()
   .setAuthor(message.author.username, message.author.avatarURL)
   .setDescription("**¡Le robo un beso a** "+user+"**!**")
