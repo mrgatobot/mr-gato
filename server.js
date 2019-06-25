@@ -60,13 +60,6 @@ if (!message.content.startsWith(prefix)) return;
   //
 });
 //
-for (const file of commandFiles) {
-	const command = require(`./adm/${file}`);
-
-	// set a new item in the Collection
-	// with the key as the command name and the value as the exported module
-	client.commands.set(command.name, command);
-}
 ///////////////// variables unicas (que solo se ejecutan 1 vez)
 const actividades = [
     "+ayuda | comandos.",
