@@ -29,6 +29,7 @@ const sql = require('sqlite')
  sql.open('./warn.sqlite') 
 
 const client = new Discord.Client()
+// Cargar carpetas
 client.on('message',async message => {
   if (!message.guild) return;
   if (message.member.bot) return;
@@ -97,33 +98,26 @@ client.on('ready', () => {
     setInterval(() => { ////// HORAS
 // FUNCION
 function tiempo(offset) {
-  
     var d = new Date();
     var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
     var nd = new Date(utc + (3600000*offset));
-
     //
-    var minutos = nd.getMinutes();
-  
+    var minutos = nd.getMinutes(); 
     if (minutos < 10){ var minutos_fix = "0"+minutos}
     else {var minutos_fix = minutos;}
-  
     //
     var horas = nd.getHours();
     if (horas > 11) var mm = "p. m.";
     else {var mm = "a. m.";}
-  
+    //
     var horas_fix = horas%12;
     if (horas_fix == 0) horas_fix = 12;
-  
     //
     return horas_fix+":"+minutos_fix+" "+mm;
 }
 var d2 = new Date();
-
 //var dia = d2.getDay();   
 //var mes = d2.getMonth();
-  
 /// Vars
 const horas = [
     puntero+"Mexico: "+tiempo('-5'),
@@ -133,10 +127,9 @@ const horas = [
     puntero+"España: "+tiempo('+2'),
     ];
     // Temporizador
-      
       if (sector == 4) sector = 0;
       else {sector ++;}
-      
+      //
       client.channels.get("561695655345782785").setName(horas[sector]);
     }, 10000);
 });
@@ -156,9 +149,7 @@ setInterval(() => {
 */
 /////////////////
 client.on("guildMemberAdd", member => { // dar rol
-    let rol = member.guild.roles.get("561284347823521811")
-    if(!rol) return;
-    member.addRole(rol.id).catch(err => console.log(err))
+  // Usuario nuevo
 });
 /*
 client.on("guildMemberAdd", (member) => {
