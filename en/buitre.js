@@ -16,10 +16,10 @@ exports.run = (client, message, args) => {
           ] 
 
   if(!user) return message.channel.send('Mencione a un usuario.');
-  if(user === message.author) return message.channel.send('No te puedes pegar a ti mismo. (?)');
+  if(user === message.author) return message.channel.send('¿A caso te consideras un buitre?');
   var embed = new Discord.RichEmbed()
   .setAuthor(message.author.username, message.author.avatarURL)
-  .setDescription(user)
+  .setDescription("¡Señala a "+user+" por ser un buitre!")
   .setColor(3447003)
   .setTimestamp()
   .setImage(gifs[Math.floor(Math.random() * gifs.length)]) // Sacar un mensaje al azar
