@@ -44,7 +44,7 @@ if (!message.content.startsWith(prefix)) return;
   const command = args.shift().toLowerCase();   
   //
   try {
-    let comando = require("./en/" + command + ".js");
+    let comando = require("./reacciones/" + command + ".js");
     if (!comando) return;
     comando.run(client, message, args);
   } catch (err) {
@@ -66,7 +66,7 @@ if (!message.content.startsWith(prefix)) return;
   const command = args.shift().toLowerCase();   
   //
   try {
-    let adm_comando = require("./adm/" + command + ".js");
+    let adm_comando = require("./admin/" + command + ".js");
     if (!adm_comando) return;
     adm_comando.run(client, message, args);
   } catch (err) {
