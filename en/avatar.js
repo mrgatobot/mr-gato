@@ -14,7 +14,7 @@ setTimeout(() => {
 }, 10000);
     const embed = new Discord.RichEmbed()
     //{miembro.tag}
-        .setTitle("Avatar de: "+{miembro.tag})
+        .setTitle("Avatar de: "+miembro.tag)
         .setImage(`${miembro.avatarURL}`)
         .setColor(3447003)
     message.channel.send(embed);
