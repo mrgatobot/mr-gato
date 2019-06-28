@@ -155,6 +155,20 @@ const horas = [
       client.channels.get("561695655345782785").setName(horas[sector]);
     }, 10000);
 });
+//
+   setInterval(() => { ////// anim
+let sec1 = 0;   
+  
+const general = [
+  "⇢ 【General】 ⇠",
+  "✦ 【General】 ✦".
+]
+sec1 ++;
+if (sec1 == 2) sec1 = 0;
+
+      client.channels.get("523340277629583368").setName(general[sec1]);
+    }, 10000);
+});
 // animacion
 /*
 const animacion = [
