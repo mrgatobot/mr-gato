@@ -2,7 +2,11 @@ const Discord = require("discord.js")
 exports.run = (client, message, args) => {
 
 let nuevo = message.mentions.users.first();
-
+    if(message.member.roles.find(r => r.name === "〘👑〙Staff")){
+        message.channel.sendMessage("Eres Staff");
+    }
+  
+  //
 if (!message.member.hasPermission('ADMINISTRATOR ')) return;
 
 if(!nuevo) return message.channel.send('Menciona a un usuario');
