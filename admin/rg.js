@@ -17,7 +17,7 @@ let MB = message.guild.roles.find(role => role.name === "〘🔰〙Miembro");
 member.removeRole(NR).catch(console.error);
 // Dar (Miembro)
 member.addRole(MB).catch(console.error);
-
+message.delete();
     //let rol = client.guild.roles.get("561284347823521811")
 
 /*
