@@ -2,15 +2,14 @@ const Discord = require("discord.js")
 exports.run = (client, message, args) => {
 
 let nuevo = message.mentions.users.first();
-//let texto = args.slice(1).join(' ');
-//if (!message.member.hasPermission('ADMINISTRATOR ')) return;
 
-if(!nuevo) return message.channel.send('Error');
-//if(!texto) return message.channel.send('Comando invalido, usa: \n⇢ '+"`"+'+reportar <usuario> <Motivo>'+"`");
+if (!message.member.hasPermission('ADMINISTRATOR ')) return;
+
+if(!nuevo) return message.channel.send('Menciona a un usuario');
   
 let canal = client.channels.get('502877069873643530');
   
-//canal.send(`💙 **¡Denle la bienvenida a **${nuevo} **!** 💙\n⇢ Esperemos que te agrade mucho el servidor.`);
+canal.send(`💙 **¡Denle la bienvenida a **${nuevo} **!** 💙\n⇢ Esperemos que te agrade mucho el servidor.`);
 let member = message.mentions.members.first();
 // Quitar el (No registrado)
 let NR = message.guild.roles.find(role => role.name === "No Registrado");
