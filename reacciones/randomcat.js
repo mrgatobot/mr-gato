@@ -10,7 +10,20 @@ exports.run = (client, message, args) => {
         "https://4.bp.blogspot.com/-qzu4nbtyym8/XFcc9yq_lYI/AAAAAAAARsI/NF8mk3usKSwMYLi7WlJKmdT6KrF2fWdkwCLcBGAs/s1600/imagenes%2B-%2Bgratis%2B-%2Bde%2B-%2Bgatitos%2B-%2Btiernos%2B-%2Bpara%2B-%2Bdescargar%2B-%2B6.jpg", // nro 6
         "https://1.bp.blogspot.com/-rFSnWDuqx-I/XFcc9xQQhBI/AAAAAAAARsM/dVCCWhH5kqM_HD-d5SmO9N4EXj_GNzbjwCLcBGAs/s1600/imagenes%2B-%2Bgratis%2B-%2Bde%2B-%2Bgatitos%2B-%2Btiernos%2B-%2Bpara%2B-%2Bdescargar%2B-%2B7.jpg", // nro 7
         "https://1.bp.blogspot.com/-mPzTl1VlTbM/XFcc-bT-QLI/AAAAAAAARsQ/SRa_STYeLKs9SpEMcJya2Uses0eY9QYMwCLcBGAs/s1600/imagenes%2B-%2Bgratis%2B-%2Bde%2B-%2Bgatitos%2B-%2Btiernos%2B-%2Bpara%2B-%2Bdescargar%2B-%2B8.jpg", // nro 8
-      ] 
+        "https://diseñoscreativos.com/wp-content/uploads/2018/06/Imagenes-de-gatos-www.diseñoscreativos.com-portada-3-1.jpg",
+        "https://diseñoscreativos.com/wp-content/uploads/2018/06/Imagenes-de-gatos-www.diseñoscreativos.com-portada-3-1.jpg",
+        "https://www.anipedia.net/imagenes/gatos-800x375.jpg",
+        "https://cadenaser00.epimg.net/ser/imagenes/2015/10/19/sociedad/1445252095_618647_1445271926_noticia_normal.jpg",
+        "https://www.somosmamas.com.ar/wp-content/uploads/2019/04/nombres-para-gatos-grises-rain.jpg",
+        "https://estaticos.muymascotas.es/media/cache/1140x_thumb/uploads/images/gallery/5970611b5bafe893953c9869/gato-nina-sillon-parrafo.jpg",
+        "https://www.feelcats.com/blog/wp-content/uploads/2018/11/como-juntar-dos-gatos.jpg",
+        "https://ichef.bbci.co.uk/news/660/cpsprodpb/8536/production/_103520143_gettyimages-908714708.jpg",
+        "https://www.abc.es/media/ciencia/2017/06/13/gatos-twitter1--620x349-kZnH--620x349@abc.jpg",
+        "https://rec-eph.primerahora.com/images/tnph3/615/304/1/1/615/304/2017/01/31/crop_crop_crop_801b8a02-7012-4b6d-863f-81a11fb5c024_1.jpg",
+        "https://www.purina.es/gato/purina-one/sites/g/files/mcldtz1856/files/2018-06/Como_saber_si_mi_gato_esta_enfermo%20%282%29.jpg",
+        "https://lavozdelmuro.net/wp-content/uploads/2017/10/gatos-consejos-y-curiosidades-3.jpg",
+        "",
+    ] 
   var embed = new Discord.RichEmbed()
   .setTitle("Mira! Un lindo gato.")
   .setColor(3447003)
