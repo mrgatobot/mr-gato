@@ -14,7 +14,7 @@ exports.run = (client, message, args) => {
       ] 
   var embed = new Discord.RichEmbed()
   .setAuthor(message.author.username, message.author.avatarURL)
-  .setDescription("**¡El FBI esta aqui!**")
+  .setDescription("**¡Ha llamado al FBI!**")
   .setColor(3447003)
   .setTimestamp()
   .setImage(gifs[Math.floor(Math.random() * gifs.length)]) // Sacar un mensaje al azar
