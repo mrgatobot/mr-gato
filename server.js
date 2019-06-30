@@ -211,6 +211,30 @@ client.on('message', (message) => { // message.author
 client.on('message', (message) => { // message.author
   if (!message.guild) return;
   if (message.member.bot) return; 
+  if (message.content.startsWith("Mew") || message.content.startsWith("mew")){
+    message.react("💌");
+    //message.channel.sendMessage("");
+  }
+});
+client.on('message', (message) => { // message.author
+  if (!message.guild) return;
+  if (message.member.bot) return; 
+  if (message.content.startsWith("Bonnie") || message.content.startsWith("bonnie")){
+    message.react("🐰");
+    //message.channel.sendMessage("");
+  }
+});
+client.on('message', (message) => { // message.author
+  if (!message.guild) return;
+  if (message.member.bot) return; 
+  if (message.content.startsWith("Bonnie") || message.content.startsWith("bonnie")){
+    message.react("🐰");
+    //message.channel.sendMessage("");
+  }
+});
+client.on('message', (message) => { // message.author
+  if (!message.guild) return;
+  if (message.member.bot) return; 
   if (message.content.startsWith("Diego") || message.content.startsWith("diego")){
     message.react("😎");
     //message.channel.sendMessage("");
