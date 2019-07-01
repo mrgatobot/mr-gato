@@ -88,6 +88,28 @@ if (!message.content.startsWith(prefix)) return;
   const command = args.shift().toLowerCase();   
   //
   try {
+    let ut_comando = require("./admin/" + command + ".js");
+    if (!ut_comando) return;
+    ut_comando.run(client, message, args);
+  } catch (err) {
+    client.channels.find(c => c.id == "536997103356870677").send("```" + err + "```");
+  } finally {};
+});
+//
+client.on('message',async message => {
+  if (!message.guild) return;
+  if (message.member.bot) return;
+let prefix;
+if(prefix_db.tiene('${message.guild.id}')) {  
+prefix = await prefix_db.obtener('${message.guild.id}')
+} else {
+prefix = "+"
+}
+if (!message.content.startsWith(prefix)) return;    
+  const args = message.content.slice(prefix.length).split(/ +/g);
+  const command = args.shift().toLowerCase();   
+  //
+  try {
     let interacciones_comando = require("./interacciones/" + command + ".js");
     if (!interacciones_comando) return;
     interacciones_comando.run(client, message, args);
