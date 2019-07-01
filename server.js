@@ -88,7 +88,7 @@ if (!message.content.startsWith(prefix)) return;
   const command = args.shift().toLowerCase();   
   //
   try {
-    let ut_comando = require("./admin/" + command + ".js");
+    let ut_comando = require("./utilidad/" + command + ".js");
     if (!ut_comando) return;
     ut_comando.run(client, message, args);
   } catch (err) {
