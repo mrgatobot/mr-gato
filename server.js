@@ -350,7 +350,7 @@ client.on('message', (message) => { // Autorizar
   //
   if (message.channel.id === '556983042426667012') {
   //
-      message.delete();
+      //message.delete();
   } else {
     // no estar en introduccion
   }
