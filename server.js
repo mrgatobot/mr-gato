@@ -339,19 +339,19 @@ client.on('message', (message) => { // Autorizar
       )
     {
       // Si manda lo de arriba
-/*
+
     if (
-      message.content.includes("polla") || message.content.includes("verga") ||
-      message.content.includes("culo") || message.content.includes("ano") ||
-      message.content.includes("trasero") || message.content.includes("an0") ||
-      message.content.includes("violar") || message.content.includes("vagina") ||
-      message.content.includes("idiota") || message.content.includes("") ||
-      message.content.includes("we") || message.content.includes("we") ||
-      message.content.includes("Correrse") || message.content.includes("correrse") ||
+      message.content("polla") || message.content("verga") ||
+      message.content("culo") || message.content("ano") ||
+      message.content("trasero") || message.content("an0") ||
+      message.content("violar") || message.content("vagina") ||
+      message.content("idiota") || message.content("") ||
+      message.content("we") || message.content("we") ||
+      message.content("Correrse") || message.content("correrse") ||
     ) {
       message.author.send("Nop");
     }
-*/    
+  
     } else { // Si no envian presentacion borrar
 if(!message.member.roles.find(r => r.name === "〘🔰〙Miembro")) {
 message.delete();
