@@ -339,7 +339,7 @@ client.on('message', (message) => { // Autorizar
       )
     {
       // Si manda lo de arriba
-
+/*
     if (
       message.content.includes("polla") || message.content.includes("verga") ||
       message.content.includes("culo") || message.content.includes("ano") ||
@@ -351,7 +351,7 @@ client.on('message', (message) => { // Autorizar
     ) {
       message.author.send("Nop");
     }
-    
+*/    
     } else { // Si no envian presentacion borrar
 if(!message.member.roles.find(r => r.name === "〘🔰〙Miembro")) {
 message.delete();
@@ -359,9 +359,7 @@ message.author.send(
 "**Introducción Inválida.**\n```Asegurate de escribir tu introducción con el formato adecuado ubicado en el canal -Inicia aqui-.```");
 }
     }
-  } else {
-    // no estar en introduccion
-  }
+  } 
 });
 
 // ================= Entrar en el server y borrar el mensaje
