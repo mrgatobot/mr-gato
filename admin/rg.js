@@ -14,10 +14,10 @@ canal.send(`💙 **¡Denle la bienvenida a **${nuevo} **!** 💙\n⇢ Esperemos 
 let member = message.mentions.members.first();
 // Quitar el (No registrado)
 let NR = message.guild.roles.find(role => role.name === "No Registrado");
-let MB = message.guild.roles.find(role => role.name === "〘🔰〙Miembro");
+//let MB = message.guild.roles.find(role => role.name === "〘🔰〙Miembro");
 member.removeRole(NR).catch(console.error);
 // Dar (Miembro)
-member.addRole(MB).catch(console.error);
+//member.addRole(MB).catch(console.error);
 message.delete();
     //let rol = client.guild.roles.get("561284347823521811")
 
