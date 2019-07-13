@@ -339,7 +339,7 @@ client.on('message', (message) => { // Autorizar
       )
     {
       // Si manda lo de arriba
-
+    /*
     if (
       message.content("polla") || message.content("verga") ||
       message.content("culo") || message.content("ano") ||
@@ -351,7 +351,7 @@ client.on('message', (message) => { // Autorizar
     ) {
       message.author.send("Nop");
     }
-  
+    */
     } else { // Si no envian presentacion borrar
 if(!message.member.roles.find(r => r.name === "〘🔰〙Miembro")) {
 message.delete();
