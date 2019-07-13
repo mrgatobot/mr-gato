@@ -321,7 +321,7 @@ client.on('message', (message) => { // message.author
   }
 });
 /////////////////////////// Sistema de seguridad [Eficiencia del 70%]
-/*
+
 client.on('message', (message) => { // Autorizar
   // 
   if (!message.guild) return;
@@ -339,7 +339,7 @@ client.on('message', (message) => { // Autorizar
       )
     {
       // Si manda lo de arriba
-    /*
+
     if (
       message.content.includes("polla") || message.content.includes("verga") ||
       message.content.includes("culo") || message.content.includes("ano") ||
@@ -347,7 +347,7 @@ client.on('message', (message) => { // Autorizar
       message.content.includes("violar") || message.content.includes("vagina") ||
       message.content.includes("idiota") || message.content.includes("") ||
       message.content.includes("we") || message.content.includes("we") ||
-      message.content.includes("we") || message.content.includes("we") ||
+      message.content.includes("Correrse") || message.content.includes("correrse") ||
     ) {
       message.author.send("Nop");
     }
