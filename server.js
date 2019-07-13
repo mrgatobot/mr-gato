@@ -363,7 +363,7 @@ message.author.send(
     // no estar en introduccion
   }
 });
-*/
+
 // ================= Entrar en el server y borrar el mensaje
 client.on('message', (message) => { // Autorizar
   // 
