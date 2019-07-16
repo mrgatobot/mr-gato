@@ -363,7 +363,7 @@ message.author.send(
 });
 
 // ================= Entrar en el server y borrar el mensaje
-/*
+
 client.on('message', (message) => { // Autorizar
   // 
   if (!message.guild) return;
@@ -376,5 +376,5 @@ client.on('message', (message) => { // Autorizar
     // no estar en introduccion
   }
 });
-*/
+
 client.login(process.env.BOT_KEY);
