@@ -249,14 +249,6 @@ client.on('message', (message) => { // message.author
 client.on('message', (message) => { // message.author
   if (!message.guild) return;
   if (message.member.bot) return; 
-  if (message.content.startsWith("Bonnie") || message.content.startsWith("bonnie")){
-    message.react("🐰");
-    //message.channel.sendMessage("");
-  }
-});
-client.on('message', (message) => { // message.author
-  if (!message.guild) return;
-  if (message.member.bot) return; 
   if (message.content.startsWith("Diego") || message.content.startsWith("diego")){
     message.react("😎");
     //message.channel.sendMessage("");
@@ -282,42 +274,6 @@ client.on('message', (message) => { // message.author
   if (message.member.bot) return; 
   if (message.content.startsWith("Yuma") || message.content.startsWith("yuma")){
     message.react("🍡");
-  }
-});
-client.on('message', (message) => { // message.author
-  if (!message.guild) return;
-  if (message.member.bot) return; 
-  if (message.content.startsWith("Cabro qliao")){
-    var embed = new Discord.RichEmbed()
-    .setImage("https://cdn.discordapp.com/attachments/502877069873643530/562111019946737666/948.gif");
-    message.channel.sendMessage(embed);
-  }
-});
-client.on('message', (message) => { // message.author
-  if (!message.guild) return;
-  if (message.member.bot) return; 
-  if (message.content.startsWith("nice")  || message.content.startsWith("Nice")){
-    var embed = new Discord.RichEmbed()
-    .setImage("https://cdn.discordapp.com/attachments/560931034225704975/562768758461038594/cat3.png");
-    message.channel.sendMessage(embed);
-  }
-});
-client.on('message', (message) => { // message.author
-  if (!message.guild) return;
-  if (message.member.bot) return; 
-  if (message.content.startsWith("No lo se rick")  || message.content.startsWith("no lo se rick")){
-    var embed = new Discord.RichEmbed()
-    .setImage("https://media.giphy.com/media/3o8dFHaKKXaCxosgw0/giphy.gif");
-    message.channel.sendMessage(embed);
-  }
-});
-client.on('message', (message) => { // message.author
-  if (!message.guild) return;
-  if (message.member.bot) return; 
-  if (message.content.startsWith("Crash")  || message.content.startsWith("crash")){
-    var embed = new Discord.RichEmbed()
-    .setImage("https://cdn.discordapp.com/attachments/560930278164398081/568596507700494336/JPEG_20190418_174642.jpg");
-    message.channel.sendMessage(embed);
   }
 });
 /////////////////////////// Sistema de seguridad [Eficiencia del 70%]
