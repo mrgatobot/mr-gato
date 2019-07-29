@@ -206,6 +206,7 @@ client.on("guildMemberAdd", (member) => {
 })
 */
 //////// REACCIONES ///////
+/*
 client.on('message', (message) => { // message.author
   if (!message.guild) return;
   if (message.member.bot) return; 
@@ -276,6 +277,7 @@ client.on('message', (message) => { // message.author
     message.react("🍡");
   }
 });
+*/
 /////////////////////////// Sistema de seguridad [Eficiencia del 70%]
 
 client.on('message', (message) => { // Autorizar
